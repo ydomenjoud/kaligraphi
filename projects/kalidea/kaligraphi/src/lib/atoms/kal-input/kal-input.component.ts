@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { buildProviders, FormElementComponent } from '../../utils/index';
 
 @Component({
@@ -10,6 +11,8 @@ import { buildProviders, FormElementComponent } from '../../utils/index';
   providers: buildProviders(KalInputComponent)
 })
 export class KalInputComponent extends FormElementComponent<string> implements OnInit {
+
+  control = new FormControl();
 
   constructor() {
     super();
