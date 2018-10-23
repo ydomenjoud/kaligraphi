@@ -1,7 +1,7 @@
 plugins:
   tslint:
     enabled: true
-    config: ./projects/kalidea/kaligraphi/tslint.json
+    config: tslint.json
 
 exclude_patterns:
   - coverage

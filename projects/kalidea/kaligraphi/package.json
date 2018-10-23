@@ -2,6 +2,12 @@
   "name": "@kalidea/kaligraphi",
   "version": "0.0.12",
   "public": "true",
+  "scripts": {
+    "dev": "ng build --watch @kalidea/kaligraphi",
+    "build": "ng build",
+    "test:ci": "ng test @kalidea/kaligraphi --karma-config=./projects/kalidea/kaligraphi/karma.test.conf.js --code-coverage",
+    "lint": "ng lint @kalidea/kaligraphi"
+  },
   "publishConfig": {
     "access": "public"
   },
