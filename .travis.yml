@@ -10,7 +10,6 @@ stages:
   - build
   - name: deploy_npm
     if: tags: true
-#  - deploy_doc
 
 jobs:
   include:
