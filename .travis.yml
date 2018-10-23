@@ -8,8 +8,9 @@ node_js: "8"
 stages:
   - test
   - build
-  - deploy_npm
-  - deploy_doc
+  - name: deploy_npm
+    if: tags: true
+#  - deploy_doc
 
 jobs:
   include:
