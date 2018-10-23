@@ -24,10 +24,3 @@ after_script:
 before_deploy:
   - cd dist/kalidea/kaligraphi
 
-deploy:
-  provider: npm
-  email: $NPM_EMAIL
-  api_key: $NPM_TOKEN
-  skip_cleanup: true
-  on:
-    tags: true
