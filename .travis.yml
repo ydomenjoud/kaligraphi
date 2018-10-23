@@ -9,30 +9,23 @@ cache: yarn
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
-#  - ./cc-test-reporter before-build
+  - ./cc-test-reporter before-build
 
 script:
   - echo "npm test temporarily disabled"
   - npm run test:ci
   - npm run build
+
 after_script:
-  - ./cc-test-reporter format-coverage -t lcov -o coverage/codeclimate.kaligraphi.json coverage/lcov.info
-  - ./cc-test-reporter sum-coverage coverage/codeclimate.*.json -p 1
-  - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./cc-test-reporter upload-coverage; fi
+- ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 
 before_deploy:
   - cd dist/kalidea/kaligraphi
 
 deploy:
-  - provider: npm
-    email: $NPM_EMAIL
-    api_key: $NPM_TOKEN
-    skip_cleanup: true
-    on:
-      tags: true
-  - provider: pages
-    skip-cleanup: true
-    github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-    keep-history: true
-    on:
-      tags: true
+  provider: npm
+  email: $NPM_EMAIL
+  api_key: $NPM_TOKEN
+  skip_cleanup: true
+  on:
+    tags: true
