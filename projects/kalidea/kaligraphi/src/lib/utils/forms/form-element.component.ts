@@ -20,17 +20,18 @@ export class FormElementComponent<T = string> extends FormControlAccessComponent
   /**
    * id for this form element
    */
-  @Input() id = uniqid('form-');
+  @Input() id =  uniqid('form-');
 
   /**
    * value for this form element
    */
   @Input() value: T;
 
+
   /**
    * tab index for this element
    */
-  @Input() tabIndex: number;
+  @Input('tab') tabIndex: number;
 
   /**
    * list of message to display
@@ -55,7 +56,7 @@ export class FormElementComponent<T = string> extends FormControlAccessComponent
   /**
    * observable to track activity for this component
    */
-  private activeSubject$: BehaviorSubject<boolean> = new BehaviorSubject(false);
+  private activeSubject$: BehaviorSubject< boolean> = new BehaviorSubject(   false );
 
   constructor() {
     super();
