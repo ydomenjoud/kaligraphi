@@ -12,3 +12,4 @@ exclude_patterns:
   - src
   - "**/*.spec.ts"
   - "**/*.js"
+  - "**/test.ts"
