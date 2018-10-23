@@ -5,6 +5,13 @@ env:
 language: node_js
 node_js: "8"
 
+notifications:
+    email: 
+        recipients:
+        - $NOTIF_GLE 
+        on_succes: always
+        on_failure: always
+
 stages:
   - test
   - build
