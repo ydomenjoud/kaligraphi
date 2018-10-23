@@ -28,7 +28,7 @@ jobs:
     - stage: build
       script:
         - npm run build
-        - npm run build:playground
+        - npm run build:playground -- --base-href https://ydomenjoud.github.io/kaligraphi/
       deploy:
         provider: pages
         skip-cleanup: true
