@@ -30,6 +30,7 @@ jobs:
 
     #DEPLOY TO NPM
     - stage: deploy_npm
+      script: echo "Deploying to npm ..."
       before_deploy:
       - cd dist/kalidea/kaligraphi
       deploy:
