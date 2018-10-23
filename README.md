@@ -2,9 +2,9 @@
 
 Agnostic Graphic Library
 
-[![Build Status](https://travis-ci.org/kalidea/kaligraphi.svg?branch=master)](https://travis-ci.org/kalidea/kaligraphi)
-[![Maintainability](https://api.codeclimate.com/v1/badges/2fcfe36810c6e928c806/maintainability)](https://codeclimate.com/github/kalidea/kaligraphi/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/2fcfe36810c6e928c806/test_coverage)](https://codeclimate.com/github/kalidea/kaligraphi/test_coverage)
+[![Build Status](https://travis-ci.org/ydomenjoud/kaligraphi.svg?branch=master)](https://travis-ci.org/ydomenjoud/kaligraphi)
+[![Maintainability](https://api.codeclimate.com/v1/badges/bdbadc64d9ad74ed489f/maintainability)](https://codeclimate.com/github/ydomenjoud/kaligraphi/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/bdbadc64d9ad74ed489f/test_coverage)](https://codeclimate.com/github/ydomenjoud/kaligraphi/test_coverage)
 
 ## Playground
 
