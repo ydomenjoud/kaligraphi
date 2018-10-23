@@ -9,7 +9,7 @@ stages:
   - test
   - build
   - name: deploy_npm
-    if: tags
+    if: tag IS present
 
 jobs:
   include:
