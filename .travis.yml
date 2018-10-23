@@ -26,13 +26,22 @@ jobs:
 
     # BUILD LIB
     - stage: build
-      script: npm run build
+      script:
+        - npm run build
+        - npm run build:playground
+        deploy:
+          provider: pages
+          skip-cleanup: true
+          github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+          keep-history: true
+          on:
+            branch: master
 
     #DEPLOY TO NPM
     - stage: deploy_npm
       script: echo "Deploying to npm ..."
       before_deploy:
-      - cd dist/kalidea/kaligraphi
+        - cd dist/kalidea/kaligraphi
       deploy:
         provider: npm
         email: $NPM_EMAIL
